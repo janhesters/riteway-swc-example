@@ -1,34 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SWC RITEway Minimal Example
 
-## Getting Started
+This is a minimal reproducable example for [this StackOverflow question](https://stackoverflow.com/questions/70899604/swc-with-javascript-how-to-handle-css-imports-and-how-to-absolute-imports).
 
-First, run the development server:
+## What Works
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+* `yarn test:identity` - Simple test of plain JavaScript.
+* `yarn test:no-absolute-import-and-react` - This test shows relative imports work and that JSX works.
+* `yarn dev` - You can see that the absolute imports work when compiled by Next.js which also [uses SWC by default](https://nextjs.org/docs/advanced-features/compiler#why-swc). (We have no idea which config they use though, and how you'd use it with [@swc-node/register](https://github.com/Brooooooklyn/swc-node/tree/master/packages/register).)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## What We Want to Make Work
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+* `yarn test` - This is the command that should ultimately work. It finds all files ending with `.test.js` within `src/` and runs them. It fails because using absolute imports and importing `.css` files crashes the compilation. (The ultimate test is `features/home/home-page-component.test.js`.)
+* `yarn test:css` - Runs a test where `.css` is imported.
+* `yarn test:absolute-import` - Runs a test with an absolute import.
+* `yarn test:watch` - We added a watch script for your convenience, which runs whenever a `.js` file is saved. It fails because it runs `yarn test` but you can change that command :)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Thanks
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Thank you sooo much for your help! 🙏
