@@ -25,7 +25,7 @@
     "lint": "next lint",
     "start": "next start",
     "test": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc-node/register src/**/*.test.js | tap-nirvana",
-    "test:absolute-import": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc-node/register src/home/no-css-absolute-imports.test.js | tap-nirvana",
+    "test:absolute-import": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc-node/register src/home/no-css-absolute-imports-component.test.js | tap-nirvana",
     "test:css": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc-node/register src/home/with-css-component.test.js | tap-nirvana",
     "test:identity": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc-node/register src/utils/identity.test.js | tap-nirvana",
     "test:no-absolute-import-and-react": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc-node/register src/home/no-css-relative-imports-component.test.js | tap-nirvana",
