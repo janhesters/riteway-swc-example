@@ -3,5 +3,12 @@
     "allowJs": true,
     "baseUrl": "./src",
     "jsx": "react-jsx"
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "cypress/"
+  ],
+  "include": [
+    "**/*.js",
+  ]
 }
