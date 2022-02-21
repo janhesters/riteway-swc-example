@@ -10,6 +10,6 @@ describe('with normal css component', async assert => {
     given: 'just rendering',
     should: 'render a message where the user is',
     actual: $('h1').text(),
-    expected: 'Landing Page',
+    expected: 'Normal CSS',
   });
 });

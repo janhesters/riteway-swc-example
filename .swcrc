@@ -1,0 +1,21 @@
+{
+  "jsc": {
+    "baseUrl": "./src",
+    "paths": {
+      "*.css": ["utils/identity-object-proxy.js"],
+      "utils/*": ["utils/*"]
+    },
+    "parser": {
+      "jsx": true,
+      "syntax": "ecmascript"
+    },
+    "transform": {
+      "react": {
+        "runtime": "automatic"
+      }
+    }
+  },
+  "module": {
+    "type": "commonjs"
+  }
+}

@@ -1,8 +1,8 @@
+import styles from 'home/home.module.css';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Fragment } from 'react';
 
-import styles from './home.module.css';
 import AbsoluteImports from './no-css-absolute-imports-component';
 
 export default function HomePageComponent({ user }) {

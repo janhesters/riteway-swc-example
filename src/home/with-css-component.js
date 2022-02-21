@@ -1,7 +1,7 @@
+import styles from 'home/home.module.css';
 import { useRouter } from 'next/router';
 import { Fragment } from 'react';
 
-import styles from './home.module.css';
 import NoCssRelativeImportsComponent from './no-css-relative-imports-component';
 
 export default function WithCSS() {

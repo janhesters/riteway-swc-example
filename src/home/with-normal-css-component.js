@@ -1,4 +1,4 @@
-import './normal.css';
+import 'home/normal.css';
 
 import { Fragment } from 'react';
 

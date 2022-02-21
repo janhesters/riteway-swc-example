@@ -7,7 +7,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@swc-node/register": "^1.4.2",
+    "@swc/core": "^1.2.143",
     "@swc/register": "^0.1.10",
     "chokidar-cli": "^3.0.0",
     "eslint": "^8.8.0",
@@ -27,12 +27,13 @@
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
-    "test": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc-node/register src/utils/dent-medic.test.js | tap-nirvana",
-    "test:absolute-import": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc-node/register src/home/no-css-absolute-imports-component.test.js | tap-nirvana",
-    "test:css": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc-node/register src/home/with-css-component.test.js | tap-nirvana",
-    "test:normal-css": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc-node/register src/home/with-normal-css-component.test.js | tap-nirvana",
-    "test:identity": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc-node/register src/utils/identity.test.js | tap-nirvana",
-    "test:no-absolute-import-and-react": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc-node/register src/home/no-css-relative-imports-component.test.js | tap-nirvana",
+    "test": "riteway -r @swc/register 'src/**/*.test.js' | tap-nirvana",
+    "test:absolute-import": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc/register src/home/no-css-absolute-imports-component.test.js | tap-nirvana",
+    "test:css": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc/register src/home/with-css-component.test.js | tap-nirvana",
+    "test:normal-css": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc/register src/home/with-normal-css-component.test.js | tap-nirvana",
+    "test:identity": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc/register src/utils/identity.test.js | tap-nirvana",
+    "test:no-absolute-import-and-react": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc/register src/home/no-css-relative-imports-component.test.js | tap-nirvana",
+    "test:identity-object-proxy": "SWC_NODE_PROJECT=./jsconfig.json riteway -r @swc/register src/utils/identity-object-proxy.test.js | tap-nirvana",
     "test:watch": "chokidar \"**/*.js\" -i \"node_modules/\" -c \"yarn test\""
   }
 }
